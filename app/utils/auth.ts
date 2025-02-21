@@ -1,7 +1,7 @@
 import NextAuth from "next-auth";
 import Google from "next-auth/providers/google";
 import Kakao from "next-auth/providers/kakao";
-import LINE from "next-auth/providers/line";
+import Line from "next-auth/providers/line";
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [
     Google({
@@ -12,7 +12,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       clientId: process.env.AUTH_KAKAO_ID,
       clientSecret: process.env.AUTH_KAKAO_SECRET,
     }),
-    LINE({
+    Line({
       clientId: process.env.AUTH_LINE_ID,
       clientSecret: process.env.AUTH_LINE_SECRET,
     }),
